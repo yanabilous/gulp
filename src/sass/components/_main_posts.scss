@@ -1,0 +1,167 @@
+
+main {
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .main_img {
+    display: flex;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: #4E4E4E;
+    //font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 66px 0 0 0;
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+
+}
+
+.cards-grid {
+  padding: 24px 0 70px 0;
+  display: grid;
+  gap: 45px;
+  grid-template-columns: repeat(8, 110px);
+  grid-template-rows: repeat(2, 145px);
+  grid-template-areas:
+"img1 text1 text1 text1 img2 text2 text2 text2"
+"img3 text3 text3 text3 img4 text4 text4 text4";
+
+  .card_demo {
+    margin-left: 20px;
+  }
+
+  .img_1 {
+    grid-area: img1;
+
+  }
+
+  .text1 {
+    grid-area: text1;
+
+  }
+
+  .img_2 {
+    grid-area: img2;
+  }
+
+  .text2 {
+    grid-area: text2;
+
+  }
+
+  .img_3 {
+    grid-area: img3;
+  }
+
+  .text3 {
+    grid-area: text3;
+
+  }
+
+  .img_4 {
+    grid-area: img4;
+  }
+
+  .text4 {
+    grid-area: text4;
+
+  }
+
+  h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4E4E4E;
+  }
+
+  .text_comments {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7C7C7C;
+  }
+
+  .description {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #5C5C5C;
+  }
+}
+
+@media (max-width: 768px) {
+    .container{
+      padding: 0 15px 0 15px;
+    }
+  .cards-grid {
+    //gap: 10px;
+    //grid-template-columns: repeat(4, 145px);
+    //grid-template-rows: repeat(4, 145px);
+    grid-template-areas:
+"img1 text1 text1 text1"
+"img2 text2 text2 text2"
+"img3 text3 text3 text3"
+"img4 text4 text4 text4";
+  }
+  .main_img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+    .container{
+      padding: 0 15px 0 15px;
+    }
+  .main_img {
+    width: 100%;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 10px;
+     .card_demo_hidden{
+      display: none;
+    }
+
+    .card_demo {
+      margin-left: 0;
+      padding-bottom: 28px;
+    }
+
+  }
+  .description {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+  }
+  .text_comments {
+    margin: 0;
+  }
+  .tittle_posts {
+    padding: 38px 0 23px 0;
+    margin: 0;
+  }
+}

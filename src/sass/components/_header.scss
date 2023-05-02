@@ -1,0 +1,115 @@
+body {
+  margin: 0 auto;
+
+}
+
+.mobile_nav {
+  display: none;
+}
+
+.nav {
+  //@include center-container;
+  max-width: 814px;
+  display: flex;
+
+  justify-content: space-around;
+  padding: 46px 68px 50px 68px;
+  margin: 0 auto;
+
+  li {
+    list-style-type: none;
+
+    :hover {
+      color: #57A4A4;
+    }
+  }
+
+  li a {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+    text-decoration: none;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: $text-color-main;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  li {
+    margin-right: 20px;
+  }
+  .mobile_nav {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 7px;
+    flex-direction: column;
+    width: 182px;
+    height: 208px;
+    background: #F5F5F5;
+    padding: 0;
+
+    &.active {
+      display: flex;
+    }
+
+    :active {
+      background: #E5E5E5;
+    }
+
+    li {
+      margin: 0;
+
+
+    }
+
+    li a {
+      padding: 0 0 0 14px;
+
+    }
+  }
+  .mobile_nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 23px 0;
+
+    button {
+      width: 44px;
+      height: 37px;
+      background: black;
+
+      &.active {
+        .lines {
+          display: none;
+        }
+      }
+
+      .cross {
+        display: none;
+      }
+
+      &.active .cross {
+        display: block;
+      }
+
+    }
+
+
+    .menu_open {
+      color: white;
+
+
+    }
+  }
+}
